@@ -59,7 +59,7 @@ function createUser() {
     useradd $useraddOptions $user
     mkdir -p /home/$user
     chown root:root /home/$user
-    chmod 755 /home/$user
+    chmod 777 /home/$user
 
     if [ -n "$pass" ]; then
         echo "$user:$pass" | chpasswd $chpasswdOptions
